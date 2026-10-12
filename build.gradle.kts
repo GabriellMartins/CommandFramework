@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
 
 group = "org.github.gabrielmartins.command"
@@ -28,4 +29,13 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+bukkit {
+    name = "CommandFramework"
+    version = "${project.version}"
+    main = "org.github.gabrielmartins.command.BukkitCommand"
+    apiVersion = "1.21"
+    author = "Gabriel Martins"
+    description = "A command framework for Bukkit/Spigot/Paper plugins"
 }

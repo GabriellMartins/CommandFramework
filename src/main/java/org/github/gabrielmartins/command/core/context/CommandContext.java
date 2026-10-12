@@ -39,6 +39,10 @@ public sealed class CommandContext permits CommandContext.Console, CommandContex
         }
     }
 
+    public void info(String message) {
+        sender.sendMessage(message);
+    }
+
     public static final class Console extends CommandContext {
         public Console(CommandSender sender, String label, String[] raw, List<String> args) {
             super(sender, label, raw, args);

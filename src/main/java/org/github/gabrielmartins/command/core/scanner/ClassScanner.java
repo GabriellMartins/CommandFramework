@@ -1,7 +1,7 @@
 package org.github.gabrielmartins.command.core.scanner;
 
 import lombok.SneakyThrows;
-import org.bukkit.plugin.java.JavaPlugin;
+import org.github.gabrielmartins.command.BukkitCommand;
 
 import java.io.File;
 import java.net.URL;
@@ -13,10 +13,10 @@ import java.util.jar.JarFile;
 public final class ClassScanner {
 
     @SneakyThrows
-    public List<Class<?>> scan(JavaPlugin plugin, String packageName) {
+    public List<Class<?>> scan(BukkitCommand instance, String packageName) {
         List<Class<?>> found = new ArrayList<>();
         String path = packageName.replace('.', '/');
-        URL resource = plugin.getClass().getClassLoader().getResource(path);
+        URL resource = BukkitCommand.getInstance().getClass().getClassLoader().getResource(path);
         if (resource == null) return found;
 
         File root = new File(resource.toURI());
