@@ -1,0 +1,9 @@
+[versions]
+paper = "1.21.11-R0.1-SNAPSHOT"
+lombok = "1.18.36"
+junit = "6.0.0"
+
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
