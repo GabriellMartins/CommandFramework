@@ -110,11 +110,27 @@ Não é necessário declarar individualmente os comandos na `plugin.yml`. A API 
 
 A `plugin.yml` do plugin continua sendo necessária para as informações básicas exigidas pelo servidor, como nome e versão.
 
-## Compatibilidade
+## Instalação
 
-- **Servidor:** Paper 1.21.11
-- **Java:** 21
-- **Linguagem:** Java
+Adicione o repositório do JitPack ao seu `build.gradle.kts`:
+
+```kotlin
+repositories {
+    maven("https://jitpack.io")
+}
+```
+
+Em seguida, adicione a dependência:
+
+```kotlin
+dependencies {
+    implementation("com.github.GabriellMartins:Command-Framework:1.0.0")
+}
+```
+
+Substitua `1.0.0` pela versão ou tag publicada no repositório.
+
+
 
 ## Sobre
 
